@@ -1,0 +1,107 @@
+/*ion-item[class*="newsletter-select-custom"] {
+    width: 100%;
+    --ion-item-background: #173F73;
+    border-color: #173F73;
+    ion-label{
+      font-family:asap-semibold !important;
+      font-size: 0.875rem;
+      position: absolute;
+      left: 10%;
+      color: white;
+    }
+    ion-select{
+      background: white;
+      color: gray;
+      max-width: 100% !important;
+      min-width: 60% !important;
+      height: 50%;
+      font-family:asap-regular !important;
+      font-size: 0.75rem;
+      border-radius: 2px;
+      position: absolute;
+      right: 10%;
+    }
+  }
+
+  ion-list{
+    width: 100%;
+    padding: 0%;
+    border-color: #173F73;
+  }
+*/
+
+ion-title{
+
+  padding: 10px;
+}
+
+ion-title h4{
+
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+  font-family: asap-semibold !important;
+}
+
+.queries{
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 10px;
+}
+
+ion-item {
+
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  --background: #ffffff;
+  --border-radius: 10px;
+  width: 80%;
+}
+
+ion-item ion-select {
+
+  width: 100%;
+}
+
+ion-select-option{
+
+  background: #ffffff !important;
+}
+
+ion-select::part(placeholder) {
+
+  color: grey;
+  opacity: 1;
+}
+
+ion-select::part(text) {
+
+  color: #000000;
+}
+
+ion-select::part(icon) {
+
+  color: #000000;
+  opacity: 1;
+}
+
+.container {
+
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+iframe{
+
+  width: 100%;
+  height: 100%;
+  border: none;
+}

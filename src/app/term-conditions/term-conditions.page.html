@@ -1,0 +1,37 @@
+<ion-header [translucent]="true" mode="ios">
+  <ion-toolbar>
+    <ion-title size="large" class="ion-text-center">
+      <div class="title">
+        Términos y condiciones
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="ios">
+  <ion-item lines="none">
+    <p>
+      Política de Tratamiento de Protección de Datos Personales
+      <br />
+      <br />
+      <a href="https://www.dimar.mil.co/sites/default/files/informes/17_09_14_pol_tra_datos_dimar.pdf"> Tratamiento de
+        datos DIMAR</a>
+    </p>
+    <br />
+      <br />
+      <br />
+      <br /><br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+  </ion-item>
+  <br>
+  <ion-button expand="block" (click)="acceptTermConditions(true)">
+    Confirmar</ion-button>
+  <ion-button expand="block" (click)="acceptTermConditions(false)">
+    Cancelar</ion-button>
+  <br>
+  <br>
+</ion-content>

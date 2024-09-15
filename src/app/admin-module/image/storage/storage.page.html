@@ -1,0 +1,26 @@
+<app-header [titulo]="titulo" [href]="href"></app-header>
+
+<ion-content>
+  <ion-content>
+    <ion-card *ngFor="let image of images">
+      <ion-card-header>
+        <img class="img-class" alt="Silhouette of mountains" [src]="image.url_imagen" />
+        <div>
+          <ion-card-title> {{ image.nombre_imagen }} </ion-card-title>
+          <p>{{ image.descripcion_imagen }}</p>
+        </div>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="stacked">Cargar imagen</ion-label>
+          <ion-icon name="image-outline" slot="start"></ion-icon>
+          <ion-input type="file" accept="image/*" (change)="onFileSelected(image.id_imagen, image.nombre_imagen, $event)"></ion-input>
+          <img class="img_preview" *ngIf="isImageSelected(image.id_imagen)" [src]="getImagePreview(image.id_imagen)" alt="Preview">
+        </ion-item>
+        <ion-button (click)="onUpdateImage(image.id_imagen)">Actualizar Imagen</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</ion-content>
+

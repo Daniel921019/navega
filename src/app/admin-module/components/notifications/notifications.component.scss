@@ -1,0 +1,36 @@
+*{
+  font-size: 1rem;
+}
+
+b {
+  color: #173f73;
+}
+
+ion-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background-color: #ffffff;
+  border: solid 1px #173f73;
+  color: #000000;
+}
+.icons {
+  color: #173f73;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 1rem;
+}
+
+ion-label{
+  font-size: 0.8rem;
+}
+
+.nombre-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}

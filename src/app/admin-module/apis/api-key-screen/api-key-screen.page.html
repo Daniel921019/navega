@@ -1,0 +1,23 @@
+<app-header [titulo]="titulo" [href]="href"></app-header>
+
+<ion-content>
+  <app-spinner *ngIf="isLoading"></app-spinner>
+  <ion-card *ngFor="let key of apiKeys" >
+
+    <ion-card-content [routerLink]="['/admin-module','api-form', key.id_api]">
+      <ion-card-title> {{key.nombre_api}} </ion-card-title>
+      <img alt="Silhouette of mountains"
+        src="https://assets.zabbix.com/img/brands/openweather.jpg" />
+      <ion-label>
+        <p>Estado:</p><ion-chip color="{{ key.status_api === '200' ? 'success' :
+          'danger'}}">{{key.status_api}}</ion-chip>
+      </ion-label>
+      <p>{{key.descripcion}}</p>
+    
+      <ion-button class="custom-button">
+        Ver detalles
+      </ion-button>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>

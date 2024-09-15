@@ -1,0 +1,55 @@
+<app-header [titulo]="titulo" [href]="href"></app-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Gestión de Usuarios</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-input 
+        [(ngModel)]="user.nombre"
+          aria-label="Nombre usuario"
+          placeholder="Nombre usuario"
+          class="custom"
+          helperText="Cambiar..."></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input 
+        [(ngModel)]="user.apellido"
+          aria-label="Apellido usuario"
+          placeholder="Apellido usuario"
+          class="custom"
+          helperText="Cambiar..."></ion-input>
+      </ion-item>
+      <ion-item class="ion-no-padding">
+        <ion-label position="stacked">ROL en Navega Seguro*</ion-label>
+        <ion-select [(ngModel)]="user.id_tipo_usuario" name="id_categoria_usuario">
+          <ion-select-option *ngFor="let typeUser of typeUsers" [value]="typeUser.id_tipo_usuario">
+            {{typeUser.tipo_usuario}}
+          </ion-select-option>
+        </ion-select>        
+      </ion-item>
+      <ion-item>
+        <ion-input 
+          [(ngModel)]="user.correo_electronico"
+          aria-label="Apellido usuario"
+          placeholder="Apellido usuario"
+          class="custom"
+          helperText="Correo electronico"
+          readonly></ion-input>
+      </ion-item>
+
+      <!-- correo_electronico
+          nombre
+          apellido
+          id_tipo_usuario 
+      -->
+</ion-card-content>
+
+<ion-button type="submit" expand="block" color="warning" (click)="user.id_tipo_usuario == 1 ? presentAlertPrompt() : updateUser()">UPDATE</ion-button>
+      
+      </ion-card>
+
+</ion-content>

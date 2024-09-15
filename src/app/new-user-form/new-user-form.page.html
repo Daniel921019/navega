@@ -1,0 +1,60 @@
+<ion-content [fullscreen]="true" mode="ios">
+  <br>
+  <div id="header">
+    <ion-item class="ion-no-padding">
+      <ion-label position="stacked">Registro Nuevo Usuario</ion-label>
+    </ion-item>
+  </div>
+  <br>
+  <div id="signup">
+    <form id="form" [formGroup]="registerForm">
+      <ion-item class="ion-no-padding">
+        <ion-label position="stacked">Correo electrónico*</ion-label>
+        <ion-input #email type="email" placeholder="Dirección de correo electrónico" 
+        formControlName="email"></ion-input>
+      </ion-item>
+      <ion-text class="validador-email" *ngIf="registerForm.get('email').errors?.email && registerForm.get('email').touched" color="danger">
+        Por favor, ingresa una dirección de correo electrónico válida.
+      </ion-text>
+
+
+      <ion-item class="ion-no-padding">
+        <ion-label position="stacked">Nombre*</ion-label>
+        <ion-input #first_name type="text" placeholder="John"
+          formControlName="first_name"></ion-input>
+      </ion-item>
+      <ion-item class="ion-no-padding">
+        <ion-label position="stacked">Apellido*</ion-label>
+        <ion-input #last_name type="text" placeholder="Velandia"
+          formControlName="last_name"></ion-input>
+      </ion-item>
+      <ion-item class="ion-no-padding">
+        <ion-label position="stacked">Grado escolar*</ion-label>
+        <ion-select #school_grade placeholder="Seleccionar opción"
+          interface="action-sheet">
+          <ion-select-option *ngFor="let schoolGrade of schoolGrades"
+            [value]="schoolGrade.id_grado_escolaridad">{{schoolGrade.nombre_grado_escolaridad}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item class="ion-no-padding">
+        <ion-label position="stacked">Categoría*</ion-label>
+        <ion-select #category_user placeholder="Seleccionar opción"
+          interface="action-sheet">
+          <ion-select-option *ngFor="let categoryUser of categoryUsers"
+            [value]="categoryUser.id_categoria_usuario">{{categoryUser.nombre_categoria_usuario}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item class="ion-no-padding">
+        <ion-checkbox #accept_term_conditions checked="false"
+          (ionChange)="acceptTermConditions($event)"></ion-checkbox>
+        <ion-label class="inform" text-wrap
+          (click)="acceptTermConditions($event)">
+          Acepto los términos de servicio y políticas de privacidad.
+        </ion-label>
+      </ion-item>
+      <ion-button expand="block"
+        (click)="registerUser(email,first_name,last_name,school_grade,category_user,accept_term_conditions)">Continuar</ion-button>
+    </form>
+    <p  routerLink="/login" class="count-style">Ya tengo cuenta</p>
+  </div>
+</ion-content>

@@ -1,0 +1,140 @@
+*{
+  font-size: 1rem;
+}
+
+ion-card-title, ion-icon{
+  color: #173F73;
+}
+
+
+
+ion-card{
+  /* background-color: white; */
+  color: black;
+  p {
+    color: black;
+  }
+}
+
+ion-icon{
+  width: 2rem;
+  height: 2rem;
+}
+
+ion-label{
+  display: flex;
+  align-items: center;
+}
+
+ion-card-header{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  ion-card-title{
+    font-weight: 600;
+  }
+  }
+
+img{
+  width: 12rem;
+  display: block;
+  margin: auto;
+}
+
+.my-button {
+  color: #ffff; 
+  --background: #173F73;
+}
+
+
+ion-card{
+  background-color: white;
+  color: black;
+  p {
+    color: black;
+  }
+}
+
+ion-icon{
+  width: 2rem;
+  height: 2rem;
+}
+
+ion-label{
+  display: flex;
+  align-items: center;
+}
+
+ion-card-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h3{
+  color: #707070;
+  font-size: 1.3rem;
+  margin-left: 1rem;
+}
+
+h4 {
+  color:#173F73;
+  font-weight:800;
+  margin: 0;
+}
+.my-button {
+  color: #ffff;
+  --background: #173F73;
+}
+
+img{
+  width: 4rem;
+}
+
+.img-title{
+  display: flex;
+  align-items: center;
+}
+
+.asunto{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.to-me-icon{
+  display: flex;
+  align-items: center;
+
+  p{
+    margin: 0;
+  color: #707070;
+
+  }
+  ion-icon{
+  color: #707070;
+  width: 0.8rem;
+
+  }
+}
+
+.icons-right{
+  ion-icon{
+    color: #707070;
+    width: 1rem;
+    margin: 0.7rem;
+  }
+}
+
+ion-card-content p {
+  font-size: 1.6rem;
+  color: #707070;
+}
+
+.img-parrafo{
+  width: 12rem;
+  display: block;
+  margin: auto;
+}
+

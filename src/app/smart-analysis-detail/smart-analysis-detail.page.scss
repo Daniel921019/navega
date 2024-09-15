@@ -1,0 +1,112 @@
+.back {
+  font-size: 24px;
+  padding-left: 10px;
+  float: left;
+}
+.title {
+  width: 100%;
+  font-size: 15px;
+}
+.subtitle {
+  width: 100%;
+  font-size: 12px;
+}
+h1,
+p {
+  color: #3d3d3d;
+}
+ion-title.md.title-default.hydrated {
+  padding-right: 50px;
+  padding-left: 0px;
+}
+.card_content_inteligente {
+  background: white;
+  color: black;
+}
+.tag-error {
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  width: fit-content;
+  background: #e6332db8;
+  padding: 10px;
+  border-radius: 10px;
+}
+.tag-warning {
+  font-size: 15px;
+  font-weight: 600;
+  color: black;
+  width: fit-content;
+  background: #f3c43b;
+  padding: 10px;
+  border-radius: 10px;
+}
+.img-describe {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  
+}
+.tag-success {
+  font-size: 15px;
+  font-weight: 600;
+  color: black;
+  width: fit-content;
+  background: #9db4ff;
+  padding: 10px;
+  border-radius: 10px;
+}
+.button-segment-analisis:hover {
+  background-color: #636363;
+}
+.button-segment-analisis:active {
+  background-color: #e10404;
+}
+.segment-button-checked ion-label {
+  border-radius: 10px;
+  color: black !important;
+}
+.content-card-items {
+  color: black;
+}
+.tabs-snalisis {
+  text-transform: capitalize;
+  color: gray;
+}
+.container-smart-analisis{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+}
+
+ion-label {
+  white-space: normal !important;
+}
+.container_air {
+  background-color: transparent;
+  width: 100%;
+  
+}
+
+.content-ion-items{
+  color: black;
+  background: white;
+  margin-right: 10px;
+
+}
+
+ion-item {
+  --background: white !important;
+  --color: black !important;
+  
+}
+
+ion-row {
+  
+  text-align: center;
+}
+
+
+/*.line-chart{
+  transform: rotate(-7deg);
+}*/

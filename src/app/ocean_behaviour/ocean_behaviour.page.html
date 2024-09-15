@@ -1,0 +1,33 @@
+<ion-content>
+<ion-header mode="md">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      <div class="title">
+        <h4>Historico estadísticas<br>meteomarinas</h4>
+      </div>
+      <div class="subtitle">
+        <h5>Estadísticas Mensuales</h5>
+      </div>
+    </ion-title>
+    <ion-item>
+      <ion-select
+        placeholder="Seleccione un municipio"
+        okText="Aceptar"
+        cancelText="Cancelar"
+        (ionChange)="isParameterCompleted($event)">
+        <ion-item>
+          <ion-label>Seleccione un municipio</ion-label>
+          <ion-select-option *ngFor="let city of cities" value="{{ city.city_name + ' - ' + city.dept_name }}">
+            {{ city.city_name + " - " + city.dept_name }}
+          </ion-select-option>
+        </ion-item>
+      </ion-select>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+  <div class="btns">
+    <ion-button *ngFor="let button of buttons_values" (click)="isLocationSelected(button)">
+      <label [innerHTML]="button.name"></label>
+    </ion-button>
+  </div>
+</ion-content>

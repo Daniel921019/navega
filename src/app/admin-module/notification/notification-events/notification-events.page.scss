@@ -1,0 +1,42 @@
+*{
+  font-family:asap-semibold !important;
+}
+
+h3{
+    color: #173F73;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  ion-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+    background-color: #135d54;
+    border: solid 1px #173F73;
+    color: #173F73;
+  }
+
+  b{
+    color: #173F73;
+  }
+
+.icon-filter{
+  color: #173f73; 
+  width: 2rem; 
+  height: 2rem;
+  margin: 0.6rem;
+}
+
+.button-filter{
+  color: #ffff;
+  --background: #173f73;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 1rem 1rem;
+}

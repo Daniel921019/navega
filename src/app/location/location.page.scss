@@ -1,0 +1,75 @@
+.custom-button-frame:hover {
+    background-color: #aacaec; /* Cambia el color de fondo del botón al pasar el mouse por encima */
+  }
+
+  .iframe-container {
+    position: relative;
+  }
+  
+  .custom-button-frame {
+    position: absolute;
+    top: 10px; 
+    left: 10px;
+    z-index: 1;
+    background-color: #fff ; /* Establece el color de fondo del botón */
+    color: #007bff; /* Establece el color del texto del botón */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+ion-content {
+
+    /*--overflow: hidden;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }*/
+    .custom-button {
+        text-transform: none;
+        padding: 0px;
+    }
+
+    ion-card {
+        --background: #ffffff;
+        text-transform: initial;
+        color: black;
+
+        // height: 180px;
+        ion-card-title {
+            padding: 8px;
+            font-size: 10px;
+            color: white;
+            font-family: asap-semibold !important;
+            background-color: #173F73;
+        }
+
+        ion-img {
+            float: left;
+            width: 16px;
+            height: 16px;
+        }
+
+        ion-card-content {
+            font-size: 10px;
+
+            .custom-button {
+                width: fit-content;
+                padding: 5px 0px;
+                font-size: 10px;
+                margin: 0px;
+                margin-left: -5px;
+                // height: auto;
+            }
+        }
+
+        ion-icon {
+            float: right;
+        }
+    }
+
+    ion-searchbar {
+        --border-radius: 10px;
+        --color: gray;
+    }
+}

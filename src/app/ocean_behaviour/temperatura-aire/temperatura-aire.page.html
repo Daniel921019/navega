@@ -1,0 +1,79 @@
+<ion-content>
+  <ion-header mode="md">
+    <ion-toolbar>
+      <ion-icon name="arrow-back" color="light" class="back" routerLink="/menu/ocean_behaviour" mode="ios"></ion-icon>
+      <ion-title class="ion-text-center">
+        <div class="title">
+          <h4>Temperatura del Aire</h4>
+        </div>
+        <div class="subtitle">
+          <h5>Estadísticas Mensuales</h5>
+          <h5>{{ city.city_name }}</h5>
+        </div>
+      </ion-title>
+      <div class="queries">
+        <ion-item class="stations">
+          <ion-select
+          placeholder="1. Seleccione una estación"
+          okText="Aceptar"
+          cancelText="Cancelar"
+          (ionChange)="areParametersCompleted($event, '', '')"
+          #stationIonSelect>
+            <ion-item>
+              <ion-label>Seleccione una estación</ion-label>
+              <ion-select-option *ngFor="let station of stations" [value]="station.station_name">
+                {{ station.station_name }}
+              </ion-select-option>
+            </ion-item>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-select
+            placeholder="2. Seleccione un año"
+            okText="Aceptar"
+            cancelText="Cancelar"
+            (ionChange)="areParametersCompleted('', '', $event)"
+            #yearIonSelect>
+            <ion-item>
+              <ion-label>Seleccione un año</ion-label>
+              <ion-select-option *ngFor="let year of years" [value]="year">
+                {{ year }}
+              </ion-select-option>
+            </ion-item>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-select
+            placeholder="3. Seleccione un mes"
+            okText="Aceptar"
+            cancelText="Cancelar"
+            (ionChange)="areParametersCompleted('', $event, '')"
+            #monthIonSelect>
+            <ion-item>
+              <ion-label>Seleccione un mes</ion-label>
+              <ion-select-option *ngFor="let month of months" [value]="month.name">
+                {{ month.name }}
+              </ion-select-option>
+            </ion-item>
+          </ion-select>
+        </ion-item>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  <h3 *ngIf="data_selected">Querido usuario: La información presentada es de caracter PRELIMINAR</h3>
+  <h2 *ngIf="data_selected">Información Meteomarina de la Temperatura del Aire en {{ city.city_name }}</h2>
+  <canvas [hidden]="!data_selected" #line_chart></canvas>
+  <canvas [hidden]="!data_selected" #trend_chart></canvas>
+  <ngx-datatable
+    *ngIf="data_selected"
+    class="bootstrap"
+    [rows]="data_table"
+    [footerHeight]="0"
+    [rowHeight]="'auto'"
+    [columnMode]="'flex'">
+    <ngx-datatable-column [sortable]="false" [canAutoResize]="true" name="Información estadística" prop="caption" [flexGrow]="1"></ngx-datatable-column>
+    <ngx-datatable-column [sortable]="false" [canAutoResize]="true" name="Resultados" prop="data" [flexGrow]="1"></ngx-datatable-column>
+  </ngx-datatable>
+</ion-content>
+
+

@@ -1,0 +1,27 @@
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="location">
+      <ion-icon name="location"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="newsletter">
+      <ion-icon name="newspaper"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="ocean_behaviour">
+      <ion-icon name="stats-chart"></ion-icon>
+    </ion-tab-button>
+ 
+    <ion-tab-button tab="settings">
+      <ion-icon name="settings"></ion-icon>
+    </ion-tab-button>
+    
+    <ion-tab-button tab="admin-module" 
+    [style.display]="adminValidator ? '' : 'none'">
+      <ion-icon name="boat-outline" ></ion-icon>
+    </ion-tab-button>
+   
+  </ion-tab-bar>
+
+</ion-tabs>

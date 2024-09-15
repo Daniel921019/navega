@@ -1,0 +1,16 @@
+<app-header [titulo]="titulo" [href]="href"></app-header>
+
+<ion-content>
+  <app-spinner *ngIf="isLoading"></app-spinner>
+  <!-- <ion-icon  *ngIf="!isLoading" [name]="filterIcon" (click)="changeFilter()" class="icon-filter"></ion-icon> -->
+  <ion-button class="button-filter" *ngIf="!isLoading" (click)="changeFilter()">{{nameFilter}}</ion-button>
+  <h3 *ngIf="!isLoading">Ultimas notificaciones</h3>
+  <div *ngIf="!isLoading">
+    <app-notifications [datos]="dataViento"></app-notifications>
+    <app-notifications [datos]="dataNivelMar"></app-notifications>
+    <app-notifications [datos]="dataPrecipitacion"></app-notifications>
+    <app-notifications [datos]="dataPresionAtmosferica"></app-notifications>
+    <app-notifications [datos]="dataSensacionTermica"></app-notifications>
+  </div>
+
+</ion-content>

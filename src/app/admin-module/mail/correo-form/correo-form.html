@@ -1,0 +1,24 @@
+<app-header [titulo]="titulo" [href]="href"></app-header>
+
+<ion-content>
+<!-- <app-spinner *ngIf="isLoading"></app-spinner> -->
+  <ion-card >
+    <ion-card-content >
+      <form>
+
+        <ion-item>
+          <ion-icon name="key"></ion-icon>
+          <ion-input [(ngModel)]="dataCorreo.asunto" name="asunto"required>
+          </ion-input>
+        </ion-item>
+
+        <ion-item >
+          <ion-icon name="key"></ion-icon>
+          <ion-textarea  [(ngModel)]="dataCorreo.contenido_html" style="resize: both;"  cols="40" rows="9" style="resize: both; color:black; " name="contenido_html"required>
+          </ion-textarea >
+        </ion-item>
+        
+        <ion-button type="submit" (click)="updateEmail()" expand="block">Editar</ion-button>
+      </form>
+    </ion-card-content>
+    

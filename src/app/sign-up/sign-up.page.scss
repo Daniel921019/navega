@@ -1,0 +1,94 @@
+ion-content{
+  #header{
+    margin-top: 2%;
+    padding-left: 30px;
+    padding-right: 30px;
+    ion-item{
+      --background: #ffffff;
+      --min-height: 16px;
+      ion-label{
+        color:#35424a;
+        font-size: 16px;
+        font-family:quicksand-bold !important;
+      }
+    }
+  }
+  #signup{
+    padding-left: 30px;
+    padding-right: 30px;
+    ion-item{
+      --background: #ffffff;
+      --color: #35424a;
+      --border-color: #ebebeb;
+      font-family:asap-semibold !important;
+      --min-height: 16px;
+      ion-label{
+        color: black;
+        font-size: 12px;
+      }
+      ion-input{
+        font-size: 10px;
+      }
+      ion-select{
+        font-size: 10px;
+      }
+      ion-select-option{
+        font-size: 10px;
+      }
+      ion-checkbox{
+        --border-color: #173F73 !important;
+        --border-width: 1px !important;
+        --border-style: solid !important;
+        --border-radius: 4px;
+        --background:#ffffff;
+        --background-checked: #173F73;
+        --size: 16px;
+        --border-color-checked: transparent;
+        --border-radius-checked: 0px;
+      }
+      .inform{
+        font-size: 12px;
+      }
+    }
+    ion-button {
+      color: #ffffff;
+      --background: #173F73;
+      height: 35px;
+      font-size: 14px;
+      border-radius: 2px;
+      font-family:asap-semibold !important;
+      clear: right;
+      text-transform:none!important;
+    }
+  }
+  #footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ion-item{
+      --background: #ffffff;
+      --min-height: 16px;
+      ion-label{
+        text-transform: initial;
+        font-size: 12px;
+        color:#abb5be;
+        font-family:asap-semibold !important;
+        letter-spacing: 0px;
+      }
+      a {
+        font-size: 13px;
+        color:#173F73;
+        font-family:asap-semibold !important;
+        letter-spacing: 0px;
+        text-decoration: none;
+      }
+    }
+  }
+  h1{
+    font-size: 10px;
+    color:#abb5be;
+    font-style: italic;
+    font-family:asap-regular !important;
+    margin: 8px 0px 10px 0px;
+  }
+}

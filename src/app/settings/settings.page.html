@@ -1,0 +1,73 @@
+<ion-header [translucent]="true" mode="md">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      Configuración
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" mode="md">
+  <div id="settings">
+    <br>
+    <ion-item class="ion-no-padding" lines="none">
+      <ion-label position="stacked" style="font-weight: bold;">Mi información</ion-label>
+      <br>
+    </ion-item>
+    <!-- <div id="Notifications" *ngFor="let notification of notifications"> -->
+    <ion-item class="ion-no-padding" lines="none">
+      <ion-label position="stacked" style="font-weight: bold;">Notificaciones
+        push</ion-label>
+      <br>
+    </ion-item>
+    <ion-item class="ion-no-padding" lines="none">
+      <ion-label position="stacked">Favorable</ion-label>
+      <ion-toggle slot="end" name="warning"
+        [(ngModel)]="excelente_notificacion"></ion-toggle>
+    </ion-item>
+    <ion-item class="ion-no-padding" lines="none">
+      <ion-label position="stacked">Advertencia</ion-label>
+      <ion-toggle slot="end" name="warning" [(ngModel)]="alerta_notificacion"></ion-toggle>
+    </ion-item>
+    <ion-item class="ion-no-padding">
+      <ion-label position="stacked">Peligro</ion-label>
+      <ion-toggle slot="end" name="Danger" [(ngModel)]="peligro_notificacion"></ion-toggle>
+    </ion-item>
+    <ion-item class="ion-no-padding" lines="none">
+      <ion-label position="stacked" style="font-weight: bold;">Unidades de
+        medida</ion-label>
+      <br>
+    </ion-item>
+    <ion-item class="ion-no-padding" lines="none">
+      <ion-label position="stacked">Velocidad del viento</ion-label>
+      <ion-select placeholder="Seleccionar opción"
+        interface="action-sheet" [(ngModel)]="selectedWindSpeed">
+        <ion-select-option *ngFor="let windSpeed of windSpeeds"
+          [value]="windSpeed.id_unidad_medida">
+          {{windSpeed.unidad_medida}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item class="ion-no-padding" lines="none">
+      <ion-label position="stacked">Sensación térmica</ion-label>
+      <ion-select placeholder="Seleccionar opción"
+        interface="action-sheet" [(ngModel)]="selectedThermalSensation">
+        <ion-select-option *ngFor="let thermalSensation of thermalSensations"
+          [value]="thermalSensation.id_unidad_medida">
+          {{thermalSensation.unidad_medida}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <br>
+    <ion-button expand="block"
+      (click)="updateUser()">¡Listo!</ion-button>
+      <div>
+        <ion-item class="ion-no-padding"  lines="none">
+          <a routerLink="/tutorial" style="margin-right: 50%;">Sobre nosotros</a>
+
+          <a routerLink="/login" style="padding-right: 0px !important" (click)="validatorEmail()" [style.display]="adminValidator ? '' : 'none'">Iniciar Sesión </a>
+        </ion-item>
+        <ion-item class="ion-no-padding"  lines="none">
+          <a (click)="validatorDeleteAccount()" style="color: black !important;">Eliminar Cuenta</a>
+        </ion-item>
+      </div>
+    </div>
+</ion-content>

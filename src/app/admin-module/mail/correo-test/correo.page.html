@@ -1,0 +1,11 @@
+<app-header [titulo]="titulo" [href]="href"></app-header>
+
+<ion-content>
+  <ion-card *ngFor="let email of emailList" [routerLink]="['/admin-module','correo', 'bienvenida', email.id_correo]">
+    <ion-card-header class="border-items">
+      <div>
+        <ion-card-title class="title"> {{email.asunto}} </ion-card-title>
+      </div>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

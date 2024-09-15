@@ -1,0 +1,36 @@
+<ion-header [translucent]="true" class="ion-no-border" mode="md">
+  <ion-toolbar>
+    <ion-icon name="arrow-back" color="light" class="back" routerLink="/menu" mode="ios"></ion-icon>
+    <ion-title class="ion-text-center">
+      <div class="title">
+        Análisis Inteligente
+      </div>
+      <div class="subtitle">
+        Isla grande Cartagena
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <ion-text>
+      <h3>Análisis inteligente</h3>
+    </ion-text>
+    <div class="brain-image"></div>
+    <div class="container-buttons">
+      <div class="smart-analysis-button" routerLink="/smart-analysis-detail/{{locationCustomNameStation}}">
+        <p>Navegantes</p>
+        <ion-icon slot="end" name="boat-outline"></ion-icon>
+      </div>
+      <div class="bg-disable">
+        <p>Pescadores</p>
+        <ion-icon slot="end" name="fish-outline"></ion-icon>
+      </div>
+      <div class="bg-disable">
+        <p>Surfing</p>
+        <ion-icon slot="end" name="sunny-outline"></ion-icon>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,34 @@
+<app-header [titulo]="titulo" [href]="href"></app-header>
+
+<ion-content>
+  <!-- <app-spinner *ngIf="isLoading"></app-spinner> -->
+  <ion-card>
+    <h3>{{dataCorreo.asunto}}</h3>
+    <ion-card-header>
+      <div class="img-title">
+        <img src="../../../../../assets/img/icon.png" alt="logo">
+        <div class="asunto">
+          <h4>Navega seguro</h4>
+
+          <div class="to-me-icon">
+            <p>to me </p>
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+      <div class="icons-right">
+        <ion-icon name="arrow-undo"></ion-icon>
+        <ion-icon name="ellipsis-vertical"></ion-icon>
+      </div>
+    </ion-card-header>
+    <ion-card-content>
+      <div [innerHTML]="contenidoHTML"></div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button class="my-button" expand="block"
+    [routerLink]="['/admin-module', 'correo', 'correo-form', dataCorreo.id_correo]">
+    Editar
+  </ion-button>
+  <ion-button expand="block" (click)="presentAlertPrompt()">PRUEBA MAIL</ion-button>
+</ion-content>

@@ -1,0 +1,118 @@
+.back {
+
+    font-size: 24px;
+    padding-left: 10px;
+    padding-top: 10px;
+    float: left;
+}
+
+.title, .subtitle {
+
+    width: 100%;
+}
+
+.title h4{
+
+    color: #ffffff;
+    text-align: center;
+    font-size: 17px;
+    font-family: asap-semibold !important;
+}
+
+.subtitle h5 {
+
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    font-family: asap-semibold !important;
+}
+
+ion-title.md.title-default.hydrated {
+
+    padding-right: 50px;
+    padding-left: 0px;
+}
+
+.queries{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    padding-bottom: 5px;
+}
+
+.stations {
+
+    width: 80% !important;
+}
+
+ion-item {
+
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    --background: #ffffff;
+    --border-radius: 10px;
+    width: 39%;
+}
+
+ion-item ion-select {
+
+    width: 100%;
+}
+
+ion-select-option{
+
+    background: #ffffff !important;
+}
+
+ion-select::part(placeholder) {
+
+    color: grey;
+    opacity: 1;
+}
+
+ion-select::part(text) {
+
+    color:#000000;
+}
+
+ion-select::part(icon) {
+
+    color: #000000;
+    opacity: 1;
+}
+
+h3{
+
+    color: #000000;
+    text-align: left;
+    font-size: 15px;
+    font-family: asap-semibold !important;
+    font-weight: bold;
+    font-style: italic;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+
+h2{
+
+    color: #000000;
+    text-align: center;
+    font-size: 17px;
+    font-family: asap-semibold !important;
+    font-weight: bold;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+
+ngx-datatable{
+
+    color: #000000 !important;
+    font-size: 15px !important;
+    font-family: asap-semibold !important;
+}

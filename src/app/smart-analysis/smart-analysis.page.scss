@@ -1,0 +1,81 @@
+.back {
+  font-size: 24px;
+  padding-left: 10px;
+  float: left;
+}
+.title {
+  width: 100%;
+  font-size: 15px;
+}
+.subtitle {
+  width: 100%;
+  font-size: 12px;
+}
+.brain-image {
+  background: url("https://i.ibb.co/4ZVkDVs/lf30-aosdpdnk-json.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 65vw;
+  margin: 0 auto;
+  height: 50vh;
+  border:none
+  // margin: 25px auto;
+}
+h3 {
+  font-size: 20px;
+  color: #3d3d3d;
+  text-align: center;
+  font-weight: 600;
+}
+ion-title.md.title-default.hydrated {
+  padding-right: 50px;
+  padding-left: 0px;
+}
+.smart-analysis-button {
+  transition: all 0.5s;
+  width: 100%;
+  margin: 5px 0px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px 0px;
+  background-color: #ffd761;
+  border-radius: 5px;
+  color: #3d3d3d;
+  text-align: center;
+  font-weight: 600;
+}
+.bg-disable {
+  cursor: pointer;
+  background: #a6a5a5;
+  transition: all 0.5s;
+  width: 100%;
+  margin: 5px 0px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px 0px;
+  border-radius: 5px;
+  color: #3d3d3d;
+  text-align: center;
+  font-weight: 600;
+}
+
+.smart-analysis-button:hover {
+  transition: all 0.5s;
+  cursor: pointer;
+  background-color: #fad25b;
+}
+p {
+  margin: 0px;
+}
+.container {
+  height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-buttons{
+  padding: 0px 10px;
+}

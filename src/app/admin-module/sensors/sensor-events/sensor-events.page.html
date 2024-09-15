@@ -1,0 +1,26 @@
+<app-header [titulo]="titulo" [href]="href"></app-header>
+
+
+<ion-content>
+  <app-spinner *ngIf="isLoading"></app-spinner>
+
+  <h3 *ngIf="!isLoading">Informacion Sensores</h3>
+  <ion-card> 
+    <ion-card-header>
+        <ion-card-subtitle>id sensor</ion-card-subtitle>
+        <ion-label style="margin-left: 5%;" ><p>Estado:</p></ion-label>
+          <ion-label style="margin-left: 10%;">Última Actualización</ion-label>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card *ngFor="let item of dataSensor"> 
+    <ion-card-header>
+        <ion-card-subtitle>Sensor: {{item.nombre_sensor}}</ion-card-subtitle>
+        <ion-label><p>Estado:</p></ion-label>
+        <ion-chip color="{{ item.no_error  != '[2]' ? 'success' :
+          'danger'}}">{{ item.no_error  != '[2]' ? 'ok' :
+          '#ERROR!' }}</ion-chip>
+          <ion-label>{{ formatDate(item.ultima_fecha) }}</ion-label>
+    </ion-card-header>
+</ion-card>
+</ion-content>

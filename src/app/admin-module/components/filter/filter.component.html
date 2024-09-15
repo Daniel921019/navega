@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon class="icons" name="chevron-back" (click)="cerrarModal()" ></ion-icon>
+    <ion-title>{{dataModal.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form #myForm="ngForm" (ngSubmit)="filter(myForm)">
+    <ion-item>
+      <ion-icon name="person-circle"></ion-icon>
+      <ion-input [(ngModel)]="filterData.nombre_user"  helperText="Helper text" name="nombre_user" type="string" placeholder="Nombre"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-icon name="mail"></ion-icon>
+      <ion-input [(ngModel)]="filterData.mail_user" helperText="Helper text" name="mail_user" type="string" placeholder="Correo"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" expand="block">Filtrar</ion-button>
+  </form>
+</ion-content>
+

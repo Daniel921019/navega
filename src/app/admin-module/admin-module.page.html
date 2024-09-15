@@ -1,0 +1,42 @@
+<app-header [titulo]="titulo" [href]="href"></app-header>
+
+<ion-content> 
+  <ion-card>
+    <ion-card-content class="info-admin">
+      <ion-icon
+        class="icons"
+        name="person"
+        >
+      </ion-icon>
+      <div>
+        <ion-card-title>Hola {{name_admin}} !!</ion-card-title>
+        <ion-card-subtitle>Administrador</ion-card-subtitle>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngFor="let item of appPages" routerLink={{item.url}}> 
+      <ion-card-header>
+        <ion-icon
+          class="icons"
+          name={{item.icon}}>
+        </ion-icon>
+        <div class="info-style">
+          <ion-card-title>{{item.title}}</ion-card-title>
+          <ion-card-subtitle>{{item.description}}</ion-card-subtitle>
+        </div>
+      </ion-card-header>
+  </ion-card>
+
+  <ion-card (click)="exitAdmin()">
+    <ion-card-header>
+      <ion-icon
+        class="icons"
+        name="log-out-outline">
+      </ion-icon>
+      <div class="info-style">
+        <ion-card-title>SALIR</ion-card-title>
+      </div>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

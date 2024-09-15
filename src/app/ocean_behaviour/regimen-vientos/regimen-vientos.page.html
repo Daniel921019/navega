@@ -1,0 +1,68 @@
+<ion-content>
+  <ion-header mode="md">
+    <ion-toolbar>
+      <ion-icon name="arrow-back" color="light" class="back" routerLink="/menu/ocean_behaviour" mode="ios"></ion-icon>
+      <ion-title class="ion-text-center">
+        <div class="title">
+          <h4>Régimen de Vientos</h4>
+        </div>
+        <div class="subtitle">
+          <h5>Estadísticas Mensuales</h5>
+          <h5>{{ city.city_name }}</h5>
+        </div>
+      </ion-title>
+      <div class="queries">
+        <ion-item class="stations">
+          <ion-select
+          placeholder="1. Seleccione una estación"
+          okText="Aceptar"
+          cancelText="Cancelar"
+          (ionChange)="areParametersCompleted($event, '', '')"
+          #stationIonSelect>
+            <ion-item>
+              <ion-label>Seleccione una estación</ion-label>
+              <ion-select-option *ngFor="let station of stations" [value]="station.station_name">
+                {{ station.station_name }}
+              </ion-select-option>
+            </ion-item>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-select
+            placeholder="2. Seleccione un año"
+            okText="Aceptar"
+            cancelText="Cancelar"
+            (ionChange)="areParametersCompleted('', '', $event)"
+            #yearIonSelect>
+            <ion-item>
+              <ion-label>Seleccione un año</ion-label>
+              <ion-select-option *ngFor="let year of years" [value]="year">
+                {{ year }}
+              </ion-select-option>
+            </ion-item>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-select
+            placeholder="3. Seleccione un mes"
+            okText="Aceptar"
+            cancelText="Cancelar"
+            (ionChange)="areParametersCompleted('', $event, '')"
+            #monthIonSelect>
+            <ion-item>
+              <ion-label>Seleccione un mes</ion-label>
+              <ion-select-option *ngFor="let month of months" [value]="month.name">
+                {{ month.name }}
+              </ion-select-option>
+            </ion-item>
+          </ion-select>
+        </ion-item>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  <div #wind_chart *ngIf="data_selected">
+    <h3>Querido usuario: La información presentada es de caracter PRELIMINAR</h3>
+    <plotly-plot [data]="graph.data" [layout]="graph.layout" [config]="graph.config" [useResizeHandler]="true" [style]="{position: 'relative', width: '100%', height: '100%'}"></plotly-plot>
+  </div>
+</ion-content>
+

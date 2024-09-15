@@ -1,0 +1,13 @@
+{
+    "baseUrl":"https://19f95552-e5f9-414f-a8e8-ada4ef36d05e.mock.pstmn.io", 
+    "language":"es",
+    "endpoint":{
+        "user":"/api/user/",
+        "school_grade":"/api/school_grade/",
+        "notification":"/api/notification/",
+        "location":"/api/location/",
+        "language":"/api/language/",
+        "category_user":"/api/category_user/",
+        "variable":"/api/variable/"
+    }
+}

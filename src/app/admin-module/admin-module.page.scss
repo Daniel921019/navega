@@ -1,0 +1,54 @@
+*{
+  font-family: asap-semibold !important;
+}
+
+ion-card {
+    --background: #ffff;
+    --color: #9efff0;
+  }
+  
+  ion-card-title {
+    --color: #173F73;
+   --font-weight: 550;
+  }
+  
+  ion-card-subtitle {
+    --color: #8c8c8c;
+  --font-size: 0.7rem;
+  }
+  
+  ion-card-header.ios {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+  
+  ion-card-header{
+    display: flex;
+  }
+
+.info-admin{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  ion-icon{
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.info-style{
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.icons{
+    color: #173F73;
+    width: 3rem;
+    height: 3rem;
+    margin-left: 0.5rem;
+  }
+  

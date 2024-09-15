@@ -1,0 +1,96 @@
+<app-header [titulo]="titulo" [href]="href"></app-header>
+<ion-content>
+  <app-spinner *ngIf="isLoading"></app-spinner>
+  <form #myForm="ngForm">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Seguridad y Autenticación</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          <div>
+            <h2>Nombre de base de datos</h2>
+            <div class="input-class">
+              <ion-icon name="server"></ion-icon>
+              <ion-input [(ngModel)]="resDatabase.nombre_database" name="nombre_database" aria-label="Nombre DataBase"
+                placeholder="Nombre DataBase" class="custom" helperText="Cambiar..." required></ion-input>
+            </div>
+          </div>
+        </ion-item>
+
+        <ion-item>
+          <div>
+            <h2>Puerto</h2>
+            <div class="input-class">
+              <ion-icon name="list-circle"></ion-icon>
+              <ion-input [(ngModel)]="resDatabase.puerto_database" name="puerto_database" aria-label="Custom input"
+                placeholder="Puerto SMTP" class="custom" helperText="Helper text" [maxlength]="20" type="number"
+                required></ion-input>
+            </div>
+          </div>
+        </ion-item>
+
+
+        <ion-item>
+          <div>
+            <h2>Usuario</h2>
+            <div class="input-class">
+              <ion-icon name="person"></ion-icon>
+              <ion-input [(ngModel)]="resDatabase.usuario_database" name="usuario_database" aria-label="Custom input"
+                placeholder="Usuario" class="custom" helperText="Helper text" required></ion-input>
+            </div>
+          </div>
+        </ion-item>
+
+        <ion-item>
+          <div>
+            <h2>Dirección IP</h2>
+            <div class="input-class">
+              <ion-icon name="radio"></ion-icon>
+              <ion-input [(ngModel)]="resDatabase.host_database" name="host_database" aria-label="Host"
+                placeholder="Host" class="custom" helperText="Helper text" required></ion-input>
+            </div>
+          </div>
+        </ion-item>
+
+        <ion-item>
+          <div style="display: inline-block; width: 100%;">
+            <h2>Contraseña</h2>
+            <div class="input-class">
+              <ion-icon name="shield-half"></ion-icon>
+              <ion-input [(ngModel)]="resDatabase.password_database" [type]="showPassword ?
+                'text' : 'password'" name="password_database" placeholder="Password" required>
+              </ion-input>
+              <ion-icon slot="end"  [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
+            </div>
+          </div>
+        </ion-item>
+
+        <br />
+
+        <ion-card-title class="titulo-info" (click)="toggleList()">Más información
+          <ion-icon *ngIf="!isListVisible" name="caret-up"></ion-icon>
+          <ion-icon *ngIf="isListVisible" name="caret-down"></ion-icon>
+        </ion-card-title>
+
+        <div [ngClass]="{'hidden': !isListVisible}">
+          <ion-item> trusted_connection
+            <ion-toggle [(ngModel)]="resDatabase.trusted_connection" labelPlacement="start" name="trusted_connection"></ion-toggle>
+          </ion-item>
+          <ion-item> trusted_server
+            <ion-toggle [(ngModel)]="resDatabase.trusted_server" labelPlacement="start" name="trusted_server"></ion-toggle>
+          </ion-item>
+          <ion-item> enable_airth_host
+            <ion-toggle [(ngModel)]="resDatabase.enable_airth_host" labelPlacement="start" name="enable_airth_host"></ion-toggle>
+          </ion-item>
+          <ion-item> encript_database
+            <ion-toggle [(ngModel)]="resDatabase.encript_database" labelPlacement="start" name="encript_database"></ion-toggle>
+          </ion-item>
+        </div>
+      </ion-card-content>
+
+      <ion-button expand="block" color="warning" (click)="submit(myForm)" [disabled]="!myForm.valid">UPDATE</ion-button>
+    </ion-card>
+  </form>
+</ion-content>

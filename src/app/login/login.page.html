@@ -1,0 +1,37 @@
+<ion-content [fullscreen]="true" mode="ios">
+  <div class="login-container">
+    <div>
+      <div id="header">
+        <img src="assets/img/logo.png" />
+        <h1>Navega Seguro</h1>
+      </div>
+      <div id="login">
+        <ion-item class="ion-no-padding">
+          <h1>¡Hola! Qué gusto verte de nuevo.</h1>
+        </ion-item>
+      </div>
+      <form id="form" [formGroup]="loginForm">
+        <ion-item class="ion-no-padding">
+          <ion-label position="stacked">Correo electrónico</ion-label>
+          <ion-input #email type="email" placeholder="ejemplo@email.com" formControlName="email"></ion-input>
+        </ion-item>
+        <ion-item class="ion-no-padding">
+          <ion-label position="stacked">Contraseña</ion-label>
+          <ion-input #password type="password" placeholder="••••••••••••" formControlName="password"></ion-input>
+        </ion-item>
+        <!-- <div id="forgot-password">
+          <ion-item class="ion-no-padding">
+            <a routerLink="/forgot-password">¿Olvidaste tu contraseña?</a>
+          </ion-item>
+        </div> -->
+        <ion-button expand="block" (click)="signIn(email,password)" [disabled]="!loginForm.valid">Iniciar sesión</ion-button>
+      </form>
+      <div id="footer">
+        <!-- <ion-item class="ion-no-padding">
+          <ion-label>¿No tienes una cuenta?&nbsp;</ion-label>
+          <a routerLink="/sign-up">Crea una cuenta nueva</a>
+        </ion-item> -->
+      </div>
+    </div>
+  </div>
+</ion-content>

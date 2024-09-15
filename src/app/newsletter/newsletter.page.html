@@ -1,0 +1,75 @@
+<ion-header #header mode="md"><!--[translucent]="true" mode="md">-->
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      <h4>Boletín Meteomarino<br>Mensual</h4>
+    </ion-title>
+    <div class="queries">
+      <ion-item>
+        <ion-select
+        placeholder="1. Seleccione una región"
+        okText="Aceptar"
+        cancelText="Cancelar"
+        (ionChange)="areParametersCompleted($event, '', '')">
+          <ion-item>
+            <ion-label>Seleccione una región</ion-label>
+            <ion-select-option *ngFor="let coast of coasts" [value]="coast">
+              {{ coast }}
+            </ion-select-option>
+          </ion-item>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-select
+          placeholder="2. Seleccione un año"
+          okText="Aceptar"
+          cancelText="Cancelar"
+          (ionChange)="areParametersCompleted('', '', $event)"
+          #yearIonSelect>
+          <ion-item>
+            <ion-label>Seleccione un año</ion-label>
+            <ion-select-option *ngFor="let year of years" [value]="year">
+              {{ year }}
+            </ion-select-option>
+          </ion-item>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-select
+          placeholder="3. Seleccione un mes"
+          okText="Aceptar"
+          cancelText="Cancelar"
+          (ionChange)="areParametersCompleted('', $event, '')"
+          #monthIonSelect>
+          <ion-item>
+            <ion-label>Seleccione un mes</ion-label>
+            <ion-select-option *ngFor="let month of months" [value]="month">
+              {{ month }}
+            </ion-select-option>
+          </ion-item>
+        </ion-select>
+      </ion-item>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content><!--[translucent]="true" mode="md">
+  <ion-header collapse="condense" class="ion-no-border">
+    <ion-toolbar>
+      <ion-title size="large">Boletín informativo</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list>
+    <ion-item class="newsletter-select-custom">
+      <ion-label>Fecha</ion-label>
+      <ion-select #news_letter interface="action-sheet" placeholder="Seleccione una opción" (ionChange)="updateNewsletter($event, news_letter)">
+        <ion-select-option *ngFor="let newsletter of newsletters" [value]="newsletter.url_boletin">{{newsletter.fecha_boletin}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>-->
+  <div class="container">
+    <iframe [src]="url_newsletter | safe"
+      frameborder="0"
+      webkitallowfullscreen
+      mozallowfullscreen
+      allowfullscreen></iframe>
+  </div>
+</ion-content>

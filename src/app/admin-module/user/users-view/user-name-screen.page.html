@@ -1,0 +1,47 @@
+<app-header [titulo]="titulo" [href]="href"></app-header>
+
+
+<ion-searchbar animated (ionChange)="search($event.target)" placeholder="Buscar Usuario">
+  <ion-icon slot="end" [name]="filterToggleIcon"
+          (click)="toggleFilter()"></ion-icon>
+  </ion-searchbar>
+
+
+<ion-content>
+  
+
+
+  <ion-card *ngFor="let user of users">
+    <ion-card-header>
+      <ion-icon class="icons" name="person" style="margin-left: 0.2rem">
+      </ion-icon>
+      <div class="info-style">
+        <ion-card-subtitle>{{user.nombre + ' ' +user.apellido }}</ion-card-subtitle>
+        <ion-card-subtitle class="user-type">
+          {{ user.id_tipo_usuario === 1 ? 'Administrador' : 'Usuario normal' }}
+        </ion-card-subtitle>        
+        <ion-card-subtitle>{{user.correo_electronico}}</ion-card-subtitle>
+      </div>
+      <div class="icons-user">
+        <ion-icon style="margin-right: 0.2rem" [routerLink]="['/admin-module/user/user-profile', user.id_usuario]" class="icons" name="create">
+        </ion-icon>
+        <ion-icon style="margin-right: 0.2rem" (click)="deleteUserOptions(user.id_usuario)" class="icons" style="color:red;" name="trash">
+        </ion-icon>
+      </div>
+    </ion-card-header>
+  </ion-card>
+
+
+  <ion-infinite-scroll threshold="150px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      class="loading-spinner-custom" 
+      loadingSpinner="bubbles"
+      loadingText="Cargando...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  
+</ion-content>
+
+<ion-footer class="transparent-toolbar" transparent> 
+    <ion-button class="custom-button" routerLink="/sign-up">Crear Nuevo Usuario</ion-button>
+</ion-footer>

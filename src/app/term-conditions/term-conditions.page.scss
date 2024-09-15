@@ -1,0 +1,26 @@
+ion-content{
+    --ion-background-color: rgb(46, 46, 54);
+}
+ion-item{
+    --background: rgb(46, 46, 54);
+    padding-top: 30px;
+
+}
+p {
+    color: #ffffff;
+    font-size: 11px;
+    font-family: asap-regular !important;
+    text-align: justify;
+    text-align-last: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+ion-button{
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 12px;
+    --background: #173F73;
+}
+ion-icon{
+    float: right;
+}

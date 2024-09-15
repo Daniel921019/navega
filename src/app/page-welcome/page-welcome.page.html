@@ -1,0 +1,29 @@
+<ion-content [fullscreen]="true" mode="ios" class="center">
+  <ion-grid class="first">
+    <div class="center">
+      <img src="assets/img/logo.png" />
+      <p class="tittle">Navega Seguro</p>
+    </div>
+  </ion-grid>
+
+  <ion-grid>
+    <div class="center">
+      <p>¡Bienvenido a Navega Seguro!</p>
+      <img class="dimi" [src]="imagenUrl" />
+    </div>
+  </ion-grid>
+
+  <ion-grid>
+    <div class="center">
+      <p>
+        
+Estamos muy contentos de que hayas descargado nuestra aplicación para asegurarte de navegar de manera segura.
+      </p>
+      <ion-button expand="block"
+        [routerLink]="['/new-user-form']"
+        >
+        Continuar
+      </ion-button>
+    </div>
+  </ion-grid>
+</ion-content>

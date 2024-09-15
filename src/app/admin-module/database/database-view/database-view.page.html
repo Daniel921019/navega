@@ -1,0 +1,17 @@
+<app-header [titulo]="titulo" [href]="href"></app-header>
+<ion-content>
+  <app-spinner *ngIf="isLoading"></app-spinner>
+  <ion-card *ngFor="let dataBase of dataBases" [routerLink]="['/admin-module' ,'database-form', dataBase.id_database]">
+    <ion-card-content>
+      <div class="img-content">
+        <ion-icon name="server"></ion-icon>
+        <ion-label><p>Estado:</p><ion-chip color="{{ dataBase.estado_database === 200 ? 'success' :
+            'danger'}}">{{dataBase.estado_database}}</ion-chip></ion-label>
+      </div>
+      <div class="info-content">
+        <ion-card-title> {{dataBase.nombre_database}} </ion-card-title>
+        {{dataBase.descripcion_database}}
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

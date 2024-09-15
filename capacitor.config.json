@@ -1,0 +1,12 @@
+{
+  "appId": "ioapp.dimarucc.safenavigation",
+  "appName": "SafeNavigation",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://190.71.156.213:4200"
+    }
+  ]
+}

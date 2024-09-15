@@ -1,0 +1,46 @@
+* {
+  font-size: 1rem;
+  font-family: asap-semibold !important;
+}
+
+.container {
+  background: #ffffff;
+  width: 100%;
+}
+
+.img-content {
+  width: 50%;
+}
+
+.info-content {
+  width: 60%;
+  ion-card-title {
+    margin-bottom: 0.5rem;
+  }
+}
+
+ion-icon {
+  width: 6rem;
+  height: 6rem;
+  color: #ebebeb;
+}
+ion-card-title {
+  color: #173f73;
+}
+
+ion-card {
+  background-color: white;
+  color: black;
+  p {
+    color: black;
+  }
+}
+
+ion-label {
+  display: flex;
+  align-items: center;
+}
+
+ion-card-content {
+  display: flex;
+}

@@ -1,0 +1,133 @@
+<app-header [titulo]="titulo" [href]="href"></app-header>
+
+<ion-content>
+  <app-spinner *ngIf="isLoading"></app-spinner>
+  <form #myForm="ngForm" (ngSubmit)="submit(myForm)">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Información de la conexion</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <div>
+          <h2>Servicio</h2>
+          <div class="input-class">
+            <ion-icon name="send"></ion-icon>
+            <ion-input
+            name="service" 
+            required
+            [(ngModel)]="serverSmtp.service"
+            aria-label="Servidor SMTP" 
+            placeholder="Servidor SMTP"
+            class="custom"
+            helperText="se digita el service SMTP"></ion-input>
+          </div>
+        </div>
+      </ion-item>
+
+        <ion-item>
+          <div>
+            <h2>Servidor SMTP</h2>
+            <div class="input-class">
+              <ion-icon name="mail"></ion-icon>
+              <ion-input
+              name="servidor" 
+              required
+              [(ngModel)]="serverSmtp.servidor"
+              aria-label="Servidor SMTP" 
+              placeholder="Servidor SMTP"
+              class="custom"
+              helperText="se digita el correo del servidor SMTP"></ion-input>
+            </div>
+          </div>
+        </ion-item>
+
+        <ion-item>
+          <div>
+            <h2>Puerto SMTP</h2>
+            <div class="input-class">
+              <ion-icon name="list-circle"></ion-icon>
+              <ion-input
+              name="puerto" 
+              required
+              [(ngModel)]="serverSmtp.puerto" 
+              aria-label="Custom input" 
+              placeholder="Puerto SMTP"
+              class="custom" 
+              helperText="Helper text" 
+              [maxlength]="20"></ion-input>
+            </div>
+          </div>
+        </ion-item>
+
+
+        <ion-item>
+          <div class="input-class">
+            <ion-icon name="lock-closed"></ion-icon>
+            <h2>Usar SSL</h2>
+            <ion-toggle 
+            name="ssl"
+            required 
+            [(ngModel)]="serverSmtp.ssl" 
+            labelPlacement="start">Label at the
+              Start</ion-toggle>
+          </div>
+        </ion-item>
+        <br />
+
+        <ion-card-title>Seguridad y Autenticación</ion-card-title>
+        <ion-item>
+          <div>
+            <h2>Usuario</h2>
+            <div class="input-class">
+              <ion-icon name="person"></ion-icon>
+              <ion-input
+              name="usuario" 
+              required
+              [(ngModel)]="serverSmtp.usuario" 
+              aria-label="Custom input" 
+              placeholder="Usuario" 
+              class="custom"
+              helperText="Helper text"></ion-input>
+            </div>
+          </div>
+        </ion-item>
+        <ion-item>
+          <div class="input-class">
+            <ion-icon name="lock-closed"></ion-icon>
+            <h2>TLS Rechazar No Autorizado</h2>
+            <ion-toggle 
+            name="rejectUnauthorized"
+            required 
+            [(ngModel)]="serverSmtp.rejectUnauthorized" 
+            labelPlacement="start">Label at the
+              Start</ion-toggle>
+          </div>
+        </ion-item>
+
+        <ion-item>
+          <div>
+            <h2>Contraseña</h2>
+            <div class="input-class">
+              <ion-icon name="shield-half"></ion-icon>
+              <ion-input
+              name="password" 
+              required 
+              [(ngModel)]="serverSmtp.password" 
+              [type]="showPassword ?'text' : 'password'" 
+              placeholder="Password"></ion-input>
+              <ion-icon slot="end" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
+            </div>
+          </div>
+        </ion-item>
+
+        
+      </ion-card-content>
+      
+      <ion-button expand="block" color="warning" type="submit" [disabled]="!myForm.valid">UPDATE</ion-button>
+      <ion-button expand="block" (click)="presentAlertPrompt()">PRUEBA MAIL</ion-button>
+      
+    </ion-card>
+  </form>
+</ion-content>

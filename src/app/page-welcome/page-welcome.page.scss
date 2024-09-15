@@ -1,0 +1,67 @@
+ion-item {
+  --background: #ffffff;
+}
+
+ion-content {
+  --background: #ffffff;
+  
+  ion-grid.first {
+    margin-top: 5vw; /* Utiliza unidades vw para ajustar el margen al ancho de la pantalla */
+  }
+  
+  .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img.dimi {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 8px solid #f5f5f3;
+    }
+    img {
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      border: 8px solid #f5f5f3;
+    }
+  }
+  
+  p.tittle {
+    font-family: quicksand-bold !important;
+    color: #35424a;
+    padding: 10px;
+    text-align: justify;
+    text-align-last: center;
+    font-size: 1.3rem;
+    margin: 2vw; /* Utiliza unidades vw para ajustar el margen al ancho de la pantalla */
+    border-radius: 1rem;
+    background-color: #d0fbf4;
+  }
+  
+  p {
+    font-family: quicksand-bold !important;
+    color: #35424a;
+    text-align: justify;
+    margin: 2vw; /* Utiliza unidades vw para ajustar el margen al ancho de la pantalla */
+    text-align-last: center;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    padding: 0.9rem;
+    background-color: #d0fbf4;
+  }
+}
+
+ion-button {
+  margin-top: 20px;
+color: #ffffff;
+--background: #173f73;
+width: 30%;
+height: 50px;
+border-radius: 50px;
+box-shadow: 3px 3px 5px rgb(75, 75, 75);
+font-size: 1rem;
+font-family: quicksand-bold !important;
+text-transform: none !important;
+}
